@@ -131,6 +131,10 @@ include_once "function.php";
                             </td>
                         </tr>
 		</tr>
+    <?php
+  }
+
+      ?>
 
 	</table>
    </div>
