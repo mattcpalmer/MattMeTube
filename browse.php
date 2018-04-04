@@ -125,8 +125,8 @@ include_once "function.php";
             	           <!-- <a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a>-->
 
                         <tr>
-            	            <a href="<?php echo $filenpath;?>" target="_blank"> <img src="<?php echo $filenpath;?>" alt="test" style="width:150:px"> <onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a>
-                            
+            	            <a href="<?php echo $filenpath;?>" target="_blank"> <img src="<?php echo $filenpath;?>" alt="test" style="height:400px; width:300:px"> <onclick="javascript:saveDownload(<?php echo $result_row[4];?>);"></a>
+
                         </tr>
 		</tr>
     <?php
