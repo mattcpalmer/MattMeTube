@@ -108,8 +108,8 @@ session_start();
   <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
    Add a Media: <label style="color:#663399"><em> (Each file limit 10M)</em></label><br/>
    <input  name="file" type="file" size="50" />
-
-	<input value="Uploadd" name="submit" type="submit" />
+<input maxlength="40" id="title" name="title" type="text" class="form-control" style="width: 550px;">
+	<input value="Upload" name="submit" type="submit" />
   </p>
 
 
