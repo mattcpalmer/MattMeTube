@@ -109,11 +109,12 @@ include_once "function.php";
     <div style="background:#339900;color:#FFFFFF; width:150px;">Uploaded Media</div>
 
 		<?php
-			while ($result_row = mysql_fetch_row($result)) //filename, username, type, mediaid, path
+			while ($result_row = mysql_fetch_row($result)) //filename, username, type, mediaid, path, title
 			{
 				$mediaid = $result_row[3];
 				$filename = $result_row[0];
 				$filenpath = $result_row[4];
+        $title = $result_row[5];
 		?>
 
 
