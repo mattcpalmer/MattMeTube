@@ -42,6 +42,8 @@ session_start();
 
 <body>
 
+<!--Nav bar -->
+
    <div id="Navigation_Bar">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
@@ -94,7 +96,7 @@ session_start();
   </div>
 
 
-
+<!--end nav bar-->
 
 
 
@@ -107,7 +109,7 @@ session_start();
    Add a Media: <label style="color:#663399"><em> (Each file limit 10M)</em></label><br/>
    <input  name="file" type="file" size="50" />
 
-	<input value="Upload" name="submit" type="submit" />
+	<input value="Uploadd" name="submit" type="submit" />
   </p>
 
 

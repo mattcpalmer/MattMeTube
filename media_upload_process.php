@@ -23,7 +23,7 @@ if(!file_exists($dirfile))
 	else
 	{
 		$upfile = $dirfile.urlencode($_FILES["file"]["name"]);
-	  
+
 	  if(file_exists($upfile))
 	  {
 	  	$result="5"; //The file has been uploaded.
@@ -38,7 +38,7 @@ if(!file_exists($dirfile))
 				else /*Successfully upload file*/
 				{
 					//insert into media table
-					$insert = "insert into media(mediaid, filename,username,type, path)".
+					$insert = "insert into media(mediaid,filename,username,type,path)".
 							  "values(NULL,'". urlencode($_FILES["file"]["name"])."','$username','".$_FILES["file"]["type"]."', '$upfile')";
 					$queryresult = mysql_query($insert)
 						  or die("Insert into Media error in media_upload_process.php " .mysql_error());
@@ -46,13 +46,13 @@ if(!file_exists($dirfile))
 					chmod($upfile, 0644);
 				}
 			}
-			else  
+			else
 			{
 					$result="7"; //upload file failed
 			}
 		}
 	}
-	
+
 	//You can process the error code of the $result here.
 ?>
 
