@@ -115,6 +115,7 @@ include_once "function.php";
 				$filename = $result_row[0];
 				$filenpath = $result_row[4];
         $title = $result_row[5];
+        $date = $result_row[6];
 		?>
 
 
@@ -126,7 +127,7 @@ include_once "function.php";
                 			   <div class="img-thumbnail"> <a href="<?php echo $filenpath;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "400" height="200"><onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a></div>
                 			   <p> <?php echo $title ?> </p>
                               <h6>views: </h6>
-                              <h6>upload date: </h6>
+                              <h6>upload date: <?php echo $date ?> </h6>
                             <br>
                             <br>
               		  </div>
