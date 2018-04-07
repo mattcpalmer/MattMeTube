@@ -94,6 +94,27 @@ text-align: center;
 <br>
 <h5> MOST VIEWED: </h5>
 
+<div class="row text-center">
+
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
+                <div class = "panel panel-default">
+      			   <div class="img-thumbnail"> <a href="../public/image.php?id=37&name=airship "><img src=uploads/Alice/2.jpg alt="Thumbnail Image 1" class="img-responsive" width = "400" height="200"></a></div>
+      			   <p>airship </p>
+                    <h6>viewed: 267</h6>
+                    <h6>uploaded at: 2017-04-23</h6>
+    		  </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
+                <div class = "panel panel-default">
+      			   <div class="img-thumbnail"> <a href="../public/image.php?id=2&name=hello"><img src=uploads/Alice/1.jpg alt="Thumbnail Image 1" class="img-responsive" width = "400" height="200"></a></div>
+      			   <p>hello</p>
+                    <h6>viewed: 159</h6>
+                    <h6>uploaded at: 2017-04-17</h6>
+    		  </div>
+            </div>
+           
+</div>
+
 
 
 
