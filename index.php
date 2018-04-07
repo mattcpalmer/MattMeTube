@@ -87,6 +87,11 @@ text-align: center;
 
 <!----------------------------MIDDLE SECTION ----------------------->
 
+<?php
+session_start();
+include_once "function.php";
+?>
+
 <div id="Middle" class="container-fluid">
   <?php
 
@@ -97,6 +102,20 @@ text-align: center;
   	}
   ?>
 
+  <?php
+  	if(isset($_REQUEST['result']) && $_REQUEST['result']!=0)
+  	{
+  		echo upload_error($_REQUEST['result']);
+  	}
+  ?>
+
+  <?php
+    while ($result_row = mysql_fetch_row($result)) //filename, username, type, mediaid, path
+    {
+      $mediaid = $result_row[3];
+      $filename = $result_row[0];
+      $filenpath = $result_row[4];
+  ?>
 
 <!---  Display the Most Viewed Media --->
 <br>
