@@ -107,7 +107,7 @@ include_once "function.php";
 ?>
 
     <div style="background:#339900;color:#FFFFFF; width:150px;">Uploaded Media</div>
-	<table width="50%" cellpadding="0" cellspacing="0">
+
 		<?php
 			while ($result_row = mysql_fetch_row($result)) //filename, username, type, mediaid, path
 			{
@@ -115,26 +115,38 @@ include_once "function.php";
 				$filename = $result_row[0];
 				$filenpath = $result_row[4];
 		?>
-        	 <tr valign="top">
-			<td>
+
+
 					<?php
 						echo $mediaid;  //mediaid
 					?>
-			</td>
 
-            	           <!-- <a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a>-->
 
-                        <tr>
-            	            <a href="<?php echo $filenpath;?>" target="_blank"> <img src="<?php echo $filenpath;?>" alt="test" style="height:200px; width:150:px"> <onclick="javascript:saveDownload(<?php echo $result_row[4];?>);"></a>
 
-                        </tr>
-		</tr>
+          <div class="row text-center">
+
+                      <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
+                          <div class = "panel panel-default">
+                			   <div class="img-thumbnail"> <a href="<?php echo $filenpath;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "400" height="200"><onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a></div>
+                			   <p> UploadName </p>
+                              <h6>views: </h6>
+                              <h6>upload date: </h6>
+                            <br>
+                            <br>
+              		  </div>
+                      </div>
+          </div>
+
+
+
+
+
     <?php
   }
 
       ?>
 
-	</table>
+
    </div>
 </body>
 
