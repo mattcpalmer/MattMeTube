@@ -136,7 +136,7 @@ include_once "function.php";
             </div>
             <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
                 <div class = "panel panel-default">
-      			   <div class="img-thumbnail"> <a href="../public/image.php?id=2&name=hello"><img src=uploads/Alice/1.jpg class="img-responsive" width = "400" height="200"></a></div>
+      			   <div class="img-thumbnail"> <a href="<?php echo $filenpath;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "400" height="200"></a></div>
       			   <p>hello</p>
                     <h6>views: </h6>
                     <h6>uploads: </h6>
