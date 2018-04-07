@@ -88,7 +88,22 @@ text-align: center;
 <!----------------------------MIDDLE SECTION ----------------------->
 
 <div id="Middle" class="container-fluid">
+  <?php
 
+  	$query = "SELECT * from media";
+  	$result = mysql_query( $query );
+  	if (!$result){
+  	   die ("Could not query the media table in the database: <br />". mysql_error());
+  	}
+  ?>
+
+  <?php
+    while ($result_row = mysql_fetch_row($result)) //filename, username, type, mediaid, path
+    {
+      $mediaid = $result_row[3];
+      $filename = $result_row[0];
+      $filenpath = $result_row[4];
+  ?>
 
 <!---  Display the Most Viewed Media --->
 <br>
@@ -98,21 +113,21 @@ text-align: center;
 
             <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
                 <div class = "panel panel-default">
-      			   <div class="img-thumbnail"> <a href="../public/image.php?id=37&name=airship "><img src=uploads/Alice/2.jpg alt="Thumbnail Image 1" class="img-responsive" width = "400" height="200"></a></div>
+      			   <div class="img-thumbnail"> <a href="<?php echo $filenpath;?>"><img src="<?php echo $filenpath;?>" alt="Thumbnail Image 1" class="img-responsive" width = "400" height="200"></a></div>
       			   <p>airship </p>
-                    <h6>viewed: 267</h6>
-                    <h6>uploaded at: 2017-04-23</h6>
+                    <h6>views: </h6>
+                    <h6>upload date: </h6>
     		  </div>
             </div>
             <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
                 <div class = "panel panel-default">
       			   <div class="img-thumbnail"> <a href="../public/image.php?id=2&name=hello"><img src=uploads/Alice/1.jpg alt="Thumbnail Image 1" class="img-responsive" width = "400" height="200"></a></div>
       			   <p>hello</p>
-                    <h6>viewed: 159</h6>
-                    <h6>uploaded at: 2017-04-17</h6>
+                    <h6>views: </h6>
+                    <h6>uploads: </h6>
     		  </div>
             </div>
-           
+
 </div>
 
 
